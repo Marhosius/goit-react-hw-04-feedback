@@ -1,16 +1,14 @@
-import { Component } from "react";
 import css from "./feedback.module.css";
 import PropTypes from "prop-types";
 
-class Section extends Component {
-    render() {
-        return (
-            <section className={css.feedback}>
-                <h2 className={css.feedbackTitle}>{this.props.title}</h2>
-                {this.props.children}
-            </section >
-        )
-    }
+const Section = ({ title, children }) => {
+    return (
+        <section className={css.feedback}>
+            <h2 className={css.feedbackTitle}>{title}</h2>
+            {children}
+        </section >
+    )
+
 }
 
 Section.propTypes = {
